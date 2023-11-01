@@ -24,7 +24,8 @@
 - Subject
     1. DatePicker로 선택한 날짜 (birthDay) - Date
     2. 연, 월, 일 (year, month, day) - Int
-    3. 버튼 색(UIColor), 클릭 가능 여부 (Bool)
+    3. 버튼 색상 (buttonColor) - UIColor 
+    4. 버튼 클릭 가능 여부 (buttonEnabled) - Bool
 - Subscribe
     1. birthDayPicker.rx.date -> birthDay
     2. birthDay -> year, month, day
@@ -32,3 +33,14 @@
     4. year, month, day -> 각 Label
     5. buttonColor -> Button.rx.backgroundColor
     6. buttonEnabled -> Button.rx.isEnabled
+
+
+#### NicknameVC
+- Subject
+    1. 텍스트필드에 입력한 문자열 (nicknameStr) - String
+    2. 버튼 히든 여부 (buttonHidden) - Bool
+- Subscribe
+    1. nicknameStr -> TextField.rx.text
+    2. TextField.rx.text -> nicknameStr
+    3. nicknameStr (count) -> buttonHidden
+    4. buttonHidden -> Button.rx.hidden
