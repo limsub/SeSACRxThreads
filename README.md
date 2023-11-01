@@ -18,3 +18,17 @@
     3. buttonColor -> TextField tintColor, TextField borderColor, Button backgroundColor
     4. phone (count) -> buttonEnabled, buttonColor
     5. buttonEnabled -> Button.rx.isEnabled
+
+
+#### BirthdayVC
+- Subject
+    1. DatePicker로 선택한 날짜 (birthDay) - Date
+    2. 연, 월, 일 (year, month, day) - Int
+    3. 버튼 색(UIColor), 클릭 가능 여부 (Bool)
+- Subscribe
+    1. birthDayPicker.rx.date -> birthDay
+    2. birthDay -> year, month, day
+    3. birthDay vs. Date()-17years -> buttonColor, buttonEnabled
+    4. year, month, day -> 각 Label
+    5. buttonColor -> Button.rx.backgroundColor
+    6. buttonEnabled -> Button.rx.isEnabled
