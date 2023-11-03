@@ -54,6 +54,7 @@ class SignInViewController: UIViewController {
         let password = passwordTextField.rx.text.orEmpty
         
         
+        
         // 두 개를 하나로 엮는다
         let validation = Observable.combineLatest(email, password) { first , second in
             return first.count > 8 && second.count > 6
@@ -76,6 +77,9 @@ class SignInViewController: UIViewController {
     func testCombineLatest() {
         let a = PublishSubject<Int>() //BehaviorSubject(value: 2)
         let b = PublishSubject<String>() //BehaviorSubject(value: "가")
+        
+        
+//        a.bind(to: <#T##Int...##Int#>)
         
         Observable.combineLatest(a, b) { first , second in
             return "결과 : \(first) & \(second)"
