@@ -6,9 +6,14 @@
 //
 
 import Foundation
+import RxSwift
+import RxCocoa
+
 
 class SignInViewModel {
     
+    let isOn = PublishSubject<Bool>()
     
+    let disposeBag = DisposeBag()
     
 }
