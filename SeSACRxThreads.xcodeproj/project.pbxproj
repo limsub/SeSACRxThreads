@@ -32,6 +32,7 @@
 		48FA82A32AF4DAB900803E55 /* BirthdayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FA82A22AF4DAB900803E55 /* BirthdayViewModel.swift */; };
 		48FA82A72AF4DFFE00803E55 /* PhoneViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FA82A62AF4DFFE00803E55 /* PhoneViewModel.swift */; };
 		48FA82AA2AF4E01C00803E55 /* EnableColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FA82A92AF4E01C00803E55 /* EnableColor.swift */; };
+		48FA82AC2AF4E2BB00803E55 /* NicknameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FA82AB2AF4E2BB00803E55 /* NicknameViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 		48FA82A22AF4DAB900803E55 /* BirthdayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayViewModel.swift; sourceTree = "<group>"; };
 		48FA82A62AF4DFFE00803E55 /* PhoneViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneViewModel.swift; sourceTree = "<group>"; };
 		48FA82A92AF4E01C00803E55 /* EnableColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnableColor.swift; sourceTree = "<group>"; };
+		48FA82AB2AF4E2BB00803E55 /* NicknameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,6 +234,7 @@
 			isa = PBXGroup;
 			children = (
 				041280722AEFAD4B00972552 /* NicknameViewController.swift */,
+				48FA82AB2AF4E2BB00803E55 /* NicknameViewModel.swift */,
 			);
 			path = Nickname;
 			sourceTree = "<group>";
@@ -385,6 +388,7 @@
 			files = (
 				48FA82AA2AF4E01C00803E55 /* EnableColor.swift in Sources */,
 				041280782AF1D14000972552 /* Resource.swift in Sources */,
+				48FA82AC2AF4E2BB00803E55 /* NicknameViewModel.swift in Sources */,
 				0412806F2AEFAD2D00972552 /* BirthdayViewController.swift in Sources */,
 				041280652AEFA2F000972552 /* SignTextField.swift in Sources */,
 				0412806C2AEFABFE00972552 /* PasswordViewController.swift in Sources */,
