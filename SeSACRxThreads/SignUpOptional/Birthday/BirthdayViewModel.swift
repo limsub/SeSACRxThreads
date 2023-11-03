@@ -5,7 +5,7 @@
 //  Created by 임승섭 on 2023/11/03.
 //
 
-import UIKit
+import Foundation
 import RxSwift
 import RxCocoa
 
@@ -18,7 +18,7 @@ class BirthdayViewModel {
     let month = BehaviorSubject(value: 12)
     let day = BehaviorSubject(value: 22)
     
-    let buttonColor = BehaviorSubject(value: UIColor.red)
+    let buttonColor = BehaviorSubject(value: EnableColor.red.color)
     let buttonEnabled = BehaviorSubject(value: false)
     
     let disposeBag = DisposeBag()
@@ -55,7 +55,7 @@ class BirthdayViewModel {
                 return date < tenYearsAgo
             }
             .subscribe(with: self) { owner , value in
-                let color = value ? UIColor.blue : UIColor.red
+                let color = value ? EnableColor.blue.color : EnableColor.red.color
                 owner.buttonColor.onNext(color)
                 owner.buttonEnabled.onNext(value)
             }
