@@ -42,8 +42,61 @@ class SignInViewController: UIViewController {
         configure()
         
         signUpButton.addTarget(self, action: #selector(signUpButtonClicked), for: .touchUpInside)
+        
+        bind()
+        testCombineLatest()
     }
     
+    
+    // 11/2 (combineLatest 학습)
+    func bind() {
+        let email = emailTextField.rx.text.orEmpty
+        let password = passwordTextField.rx.text.orEmpty
+        
+        
+        // 두 개를 하나로 엮는다
+        let validation = Observable.combineLatest(email, password) { first , second in
+            return first.count > 8 && second.count > 6
+        }
+        
+        validation
+            .bind(to: signInButton.rx.isEnabled)
+            .disposed(by: disposeBag)
+        
+        validation
+            .subscribe(with: self) { owner , value in
+                owner.signInButton.backgroundColor = value ? UIColor.blue : UIColor.red
+                owner.emailTextField.layer.borderColor = value ? UIColor.blue.cgColor : UIColor.red.cgColor
+                owner.passwordTextField.layer.borderColor = value ? UIColor.blue.cgColor : UIColor.red.cgColor
+            }
+            .disposed(by: disposeBag)
+    }
+    
+    // 11/2 (combineLatest + 초기값 유무)
+    func testCombineLatest() {
+        let a = PublishSubject<Int>() //BehaviorSubject(value: 2)
+        let b = PublishSubject<String>() //BehaviorSubject(value: "가")
+        
+        Observable.combineLatest(a, b) { first , second in
+            return "결과 : \(first) & \(second)"
+        }
+        .subscribe(with: self) { owner , value in
+            print(value)
+        }
+        .disposed(by: disposeBag)
+        
+        a.onNext(100)
+        a.onNext(200)
+        a.onNext(300)
+        
+        b.onNext("감")
+        b.onNext("남")
+        b.onNext("담")
+    }
+    
+    
+    
+    // 11/1
     func testSwitch() {
         view.addSubview(test)
         test.snp.makeConstraints { make in
