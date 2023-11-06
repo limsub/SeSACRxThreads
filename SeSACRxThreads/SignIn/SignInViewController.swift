@@ -64,6 +64,13 @@ class SignInViewController: UIViewController {
                 owner.passwordTextField.layer.borderColor = value ? UIColor.blue.cgColor : UIColor.red.cgColor
             }
             .disposed(by: disposeBag)
+        
+        
+        signInButton.rx.tap
+            .subscribe(with: self) { owner , value in
+                print("SELECT, 화면 전환")
+                owner.navigationController?.pushViewController(SearchViewController(), animated: true)
+            }
     }
     
     // 11/2 (combineLatest + 초기값 유무)

@@ -29,10 +29,16 @@
 		041280732AEFAD4B00972552 /* NicknameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041280722AEFAD4B00972552 /* NicknameViewController.swift */; };
 		041280782AF1D14000972552 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041280772AF1D14000972552 /* Resource.swift */; };
 		4820558A2AF224F9006946B1 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482055892AF224F9006946B1 /* String+Extension.swift */; };
+		485893622AF8B7AD00CB527F /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 485893612AF8B7AD00CB527F /* Kingfisher */; };
+		485893642AF8B7B600CB527F /* SearchAPIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485893632AF8B7B600CB527F /* SearchAPIModel.swift */; };
+		485893662AF8B7BC00CB527F /* BasicAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485893652AF8B7BC00CB527F /* BasicAPIManager.swift */; };
 		48FA82A32AF4DAB900803E55 /* BirthdayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FA82A22AF4DAB900803E55 /* BirthdayViewModel.swift */; };
 		48FA82A72AF4DFFE00803E55 /* PhoneViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FA82A62AF4DFFE00803E55 /* PhoneViewModel.swift */; };
 		48FA82AA2AF4E01C00803E55 /* EnableColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FA82A92AF4E01C00803E55 /* EnableColor.swift */; };
 		48FA82AC2AF4E2BB00803E55 /* NicknameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FA82AB2AF4E2BB00803E55 /* NicknameViewModel.swift */; };
+		48FA82AF2AF5065300803E55 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FA82AE2AF5065300803E55 /* SearchTableViewCell.swift */; };
+		48FA82B12AF5065A00803E55 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FA82B02AF5065A00803E55 /* SearchViewController.swift */; };
+		48FA82B32AF5068700803E55 /* SampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FA82B22AF5068700803E55 /* SampleViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,10 +82,15 @@
 		041280722AEFAD4B00972552 /* NicknameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameViewController.swift; sourceTree = "<group>"; };
 		041280772AF1D14000972552 /* Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
 		482055892AF224F9006946B1 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		485893632AF8B7B600CB527F /* SearchAPIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAPIModel.swift; sourceTree = "<group>"; };
+		485893652AF8B7BC00CB527F /* BasicAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicAPIManager.swift; sourceTree = "<group>"; };
 		48FA82A22AF4DAB900803E55 /* BirthdayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayViewModel.swift; sourceTree = "<group>"; };
 		48FA82A62AF4DFFE00803E55 /* PhoneViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneViewModel.swift; sourceTree = "<group>"; };
 		48FA82A92AF4E01C00803E55 /* EnableColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnableColor.swift; sourceTree = "<group>"; };
 		48FA82AB2AF4E2BB00803E55 /* NicknameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameViewModel.swift; sourceTree = "<group>"; };
+		48FA82AE2AF5065300803E55 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+		48FA82B02AF5065A00803E55 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		48FA82B22AF5068700803E55 /* SampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				485893622AF8B7AD00CB527F /* Kingfisher in Frameworks */,
 				041280602AEFA0AC00972552 /* SnapKit in Frameworks */,
 				0412805D2AEFA09E00972552 /* RxSwift in Frameworks */,
 				0412805B2AEFA09E00972552 /* RxCocoa in Frameworks */,
@@ -133,6 +145,7 @@
 		041280222AEF9BAB00972552 /* SeSACRxThreads */ = {
 			isa = PBXGroup;
 			children = (
+				48FA82AD2AF5064900803E55 /* Search */,
 				48FA82A82AF4E00F00803E55 /* Enum */,
 				482055882AF224EF006946B1 /* Extension */,
 				041280532AEF9C1F00972552 /* SignUp */,
@@ -212,6 +225,15 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		4858935F2AF8B75D00CB527F /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				485893632AF8B7B600CB527F /* SearchAPIModel.swift */,
+				485893652AF8B7BC00CB527F /* BasicAPIManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		48FA82A12AF4DAA200803E55 /* Birthday */ = {
 			isa = PBXGroup;
 			children = (
@@ -247,6 +269,17 @@
 			path = Enum;
 			sourceTree = "<group>";
 		};
+		48FA82AD2AF5064900803E55 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				4858935F2AF8B75D00CB527F /* Network */,
+				48FA82AE2AF5065300803E55 /* SearchTableViewCell.swift */,
+				48FA82B02AF5065A00803E55 /* SearchViewController.swift */,
+				48FA82B22AF5068700803E55 /* SampleViewController.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -267,6 +300,7 @@
 				0412805A2AEFA09E00972552 /* RxCocoa */,
 				0412805C2AEFA09E00972552 /* RxSwift */,
 				0412805F2AEFA0AC00972552 /* SnapKit */,
+				485893612AF8B7AD00CB527F /* Kingfisher */,
 			);
 			productName = SeSACRxThreads;
 			productReference = 041280202AEF9BAB00972552 /* SeSACRxThreads.app */;
@@ -343,6 +377,7 @@
 			packageReferences = (
 				041280592AEFA09D00972552 /* XCRemoteSwiftPackageReference "RxSwift" */,
 				0412805E2AEFA0AC00972552 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				485893602AF8B7AD00CB527F /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 041280212AEF9BAB00972552 /* Products */;
 			projectDirPath = "";
@@ -386,6 +421,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				485893642AF8B7B600CB527F /* SearchAPIModel.swift in Sources */,
 				48FA82AA2AF4E01C00803E55 /* EnableColor.swift in Sources */,
 				041280782AF1D14000972552 /* Resource.swift in Sources */,
 				48FA82AC2AF4E2BB00803E55 /* NicknameViewModel.swift in Sources */,
@@ -396,14 +432,18 @@
 				48FA82A72AF4DFFE00803E55 /* PhoneViewModel.swift in Sources */,
 				041280282AEF9BAB00972552 /* ViewController.swift in Sources */,
 				041280632AEFA0CE00972552 /* PointButton.swift in Sources */,
+				48FA82B12AF5065A00803E55 /* SearchViewController.swift in Sources */,
+				48FA82AF2AF5065300803E55 /* SearchTableViewCell.swift in Sources */,
 				041280242AEF9BAB00972552 /* AppDelegate.swift in Sources */,
 				4820558A2AF224F9006946B1 /* String+Extension.swift in Sources */,
 				48FA82A32AF4DAB900803E55 /* BirthdayViewModel.swift in Sources */,
 				041280732AEFAD4B00972552 /* NicknameViewController.swift in Sources */,
 				0412806A2AEFA91E00972552 /* SignUpViewController.swift in Sources */,
+				485893662AF8B7BC00CB527F /* BasicAPIManager.swift in Sources */,
 				041280712AEFAD3D00972552 /* PhoneViewController.swift in Sources */,
 				041280262AEF9BAB00972552 /* SceneDelegate.swift in Sources */,
 				041280582AEFA05300972552 /* SignInViewModel.swift in Sources */,
+				48FA82B32AF5068700803E55 /* SampleViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -766,6 +806,14 @@
 				minimumVersion = 5.6.0;
 			};
 		};
+		485893602AF8B7AD00CB527F /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -783,6 +831,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0412805E2AEFA0AC00972552 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		485893612AF8B7AD00CB527F /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 485893602AF8B7AD00CB527F /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

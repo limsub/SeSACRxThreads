@@ -44,3 +44,15 @@
     2. TextField.rx.text -> nicknameStr
     3. nicknameStr (count) -> buttonHidden
     4. buttonHidden -> Button.rx.hidden
+
+<br>
+<br>
+
+## 11/2
+- ViewModel 분리
+
+<br>
+<br>
+
+## 11/3
+- SearchTableView
