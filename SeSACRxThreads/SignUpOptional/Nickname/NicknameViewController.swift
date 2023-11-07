@@ -26,9 +26,11 @@ class NicknameViewController: UIViewController {
         
         configureLayout()
        
-        nextButton.addTarget(self, action: #selector(nextButtonClicked), for: .touchUpInside)
+//        nextButton.addTarget(self, action: #selector(nextButtonClicked), for: .touchUpInside)
         
-        bind()
+//        bind()
+        
+        bindDriver()
 
     }
     
@@ -52,6 +54,25 @@ class NicknameViewController: UIViewController {
             .bind(to: nextButton.rx.isHidden)
             .disposed(by: disposeBag)
         
+    }
+    
+    // 11/3 driver 사용해보기 (버튼 클릭 시 랜덤 숫자 방출)
+    func bindDriver() {
+        let tap = nextButton.rx.tap
+            .map { "하이 \(Int.random(in: 1...1000))" }
+            .asDriver(onErrorJustReturn: "")
+            
+        tap
+            .drive(with: self) { owner , value in
+            owner.nextButton.setTitle(value, for: .normal)
+            }
+            .disposed(by: disposeBag)
+        
+        tap
+            .drive(with: self) { owner , value in
+                owner.navigationItem.title = value
+            }
+            .disposed(by: disposeBag)
     }
     
     
