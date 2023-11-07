@@ -55,4 +55,15 @@
 <br>
 
 ## 11/3
-- SearchTableView
+#### SearchVC
+- cell의 prepareForReuse에서 disposeBag을 새로 생성
+- tableView.rx.itemSelected와 tableView.rx.modelSelected를 zip 으로 묶어서 활용
+- subject의 배열에 데이터를 추가하는 방법
+    1. items.value() - try 구문 필요
+    2. data 배열 수정 후, items.onNext(data)
+- debounce를 이용하여 효율적인 실시간 검색 기능 (네트워크 콜 절약)
+
+<br>
+<br>
+
+## 11/6
